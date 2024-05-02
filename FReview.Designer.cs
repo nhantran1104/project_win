@@ -32,14 +32,13 @@
             materialCard2 = new MaterialSkin.Controls.MaterialCard();
             pictureBox2 = new PictureBox();
             cbxRate = new ComboBox();
-            lbRateStar = new Label();
+            lbRate = new Label();
             btnClearRate = new MaterialSkin.Controls.MaterialButton();
-            btnSubmitRate = new MaterialSkin.Controls.MaterialButton();
+            btnSubmitRatings = new MaterialSkin.Controls.MaterialButton();
             materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            label18 = new Label();
+            btnUpdateRatings = new MaterialSkin.Controls.MaterialButton();
+            lbReview = new Label();
             txtReview = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
-            btnClearReview = new MaterialSkin.Controls.MaterialButton();
-            btnSubmitReview = new MaterialSkin.Controls.MaterialButton();
             materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             materialCard1.SuspendLayout();
@@ -50,23 +49,20 @@
             materialCard2.BackColor = Color.FromArgb(255, 255, 255);
             materialCard2.Controls.Add(pictureBox2);
             materialCard2.Controls.Add(cbxRate);
-            materialCard2.Controls.Add(lbRateStar);
-            materialCard2.Controls.Add(btnClearRate);
-            materialCard2.Controls.Add(btnSubmitRate);
             materialCard2.Depth = 0;
             materialCard2.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialCard2.Location = new Point(36, 384);
+            materialCard2.Location = new Point(173, 255);
             materialCard2.Margin = new Padding(14);
             materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard2.Name = "materialCard2";
             materialCard2.Padding = new Padding(14);
-            materialCard2.Size = new Size(380, 132);
+            materialCard2.Size = new Size(242, 130);
             materialCard2.TabIndex = 32;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(299, 49);
+            pictureBox2.Location = new Point(128, 49);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(60, 56);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -78,22 +74,22 @@
             cbxRate.Font = new Font("Nirmala UI Semilight", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbxRate.FormattingEnabled = true;
             cbxRate.Items.AddRange(new object[] { "5", "4", "3", "2", "1" });
-            cbxRate.Location = new Point(200, 54);
+            cbxRate.Location = new Point(17, 56);
             cbxRate.Name = "cbxRate";
             cbxRate.Size = new Size(79, 49);
             cbxRate.TabIndex = 30;
             cbxRate.Text = "5";
             // 
-            // lbRateStar
+            // lbRate
             // 
-            lbRateStar.AutoSize = true;
-            lbRateStar.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbRateStar.ForeColor = Color.LightGreen;
-            lbRateStar.Location = new Point(18, 14);
-            lbRateStar.Name = "lbRateStar";
-            lbRateStar.Size = new Size(110, 31);
-            lbRateStar.TabIndex = 29;
-            lbRateStar.Text = "Rate Star";
+            lbRate.AutoSize = true;
+            lbRate.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbRate.ForeColor = Color.LightGreen;
+            lbRate.Location = new Point(17, 255);
+            lbRate.Name = "lbRate";
+            lbRate.Size = new Size(110, 31);
+            lbRate.TabIndex = 29;
+            lbRate.Text = "Rate Star";
             // 
             // btnClearRate
             // 
@@ -102,7 +98,7 @@
             btnClearRate.Depth = 0;
             btnClearRate.HighEmphasis = true;
             btnClearRate.Icon = null;
-            btnClearRate.Location = new Point(100, 56);
+            btnClearRate.Location = new Point(864, 349);
             btnClearRate.Margin = new Padding(4, 6, 4, 6);
             btnClearRate.MouseState = MaterialSkin.MouseState.HOVER;
             btnClearRate.Name = "btnClearRate";
@@ -113,34 +109,38 @@
             btnClearRate.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
             btnClearRate.UseAccentColor = true;
             btnClearRate.UseVisualStyleBackColor = true;
+            btnClearRate.Click += btnClearRate_Click;
             // 
-            // btnSubmitRate
+            // btnSubmitRatings
             // 
-            btnSubmitRate.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnSubmitRate.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnSubmitRate.Depth = 0;
-            btnSubmitRate.HighEmphasis = true;
-            btnSubmitRate.Icon = null;
-            btnSubmitRate.Location = new Point(17, 56);
-            btnSubmitRate.Margin = new Padding(4, 6, 4, 6);
-            btnSubmitRate.MouseState = MaterialSkin.MouseState.HOVER;
-            btnSubmitRate.Name = "btnSubmitRate";
-            btnSubmitRate.NoAccentTextColor = Color.Empty;
-            btnSubmitRate.Size = new Size(75, 36);
-            btnSubmitRate.TabIndex = 27;
-            btnSubmitRate.Text = "submit ";
-            btnSubmitRate.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnSubmitRate.UseAccentColor = true;
-            btnSubmitRate.UseVisualStyleBackColor = true;
-            btnSubmitRate.Click += btnSubmitRate_Click;
+            btnSubmitRatings.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnSubmitRatings.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnSubmitRatings.Depth = 0;
+            btnSubmitRatings.HighEmphasis = true;
+            btnSubmitRatings.Icon = null;
+            btnSubmitRatings.Location = new Point(660, 349);
+            btnSubmitRatings.Margin = new Padding(4, 6, 4, 6);
+            btnSubmitRatings.MouseState = MaterialSkin.MouseState.HOVER;
+            btnSubmitRatings.Name = "btnSubmitRatings";
+            btnSubmitRatings.NoAccentTextColor = Color.Empty;
+            btnSubmitRatings.Size = new Size(75, 36);
+            btnSubmitRatings.TabIndex = 27;
+            btnSubmitRatings.Text = "submit ";
+            btnSubmitRatings.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnSubmitRatings.UseAccentColor = true;
+            btnSubmitRatings.UseVisualStyleBackColor = true;
+            btnSubmitRatings.Click += btnSubmitRatings_Click;
             // 
             // materialCard1
             // 
             materialCard1.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard1.Controls.Add(label18);
+            materialCard1.Controls.Add(btnUpdateRatings);
+            materialCard1.Controls.Add(materialCard2);
+            materialCard1.Controls.Add(lbReview);
+            materialCard1.Controls.Add(btnClearRate);
+            materialCard1.Controls.Add(lbRate);
+            materialCard1.Controls.Add(btnSubmitRatings);
             materialCard1.Controls.Add(txtReview);
-            materialCard1.Controls.Add(btnClearReview);
-            materialCard1.Controls.Add(btnSubmitReview);
             materialCard1.Depth = 0;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard1.Location = new Point(36, 79);
@@ -148,19 +148,39 @@
             materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard1.Name = "materialCard1";
             materialCard1.Padding = new Padding(14);
-            materialCard1.Size = new Size(989, 277);
+            materialCard1.Size = new Size(1016, 429);
             materialCard1.TabIndex = 31;
             // 
-            // label18
+            // btnUpdateRatings
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.ForeColor = Color.LightGreen;
-            label18.Location = new Point(14, 17);
-            label18.Name = "label18";
-            label18.Size = new Size(141, 31);
-            label18.TabIndex = 25;
-            label18.Text = "Post Review";
+            btnUpdateRatings.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnUpdateRatings.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnUpdateRatings.Depth = 0;
+            btnUpdateRatings.HighEmphasis = true;
+            btnUpdateRatings.Icon = null;
+            btnUpdateRatings.Location = new Point(760, 349);
+            btnUpdateRatings.Margin = new Padding(4, 6, 4, 6);
+            btnUpdateRatings.MouseState = MaterialSkin.MouseState.HOVER;
+            btnUpdateRatings.Name = "btnUpdateRatings";
+            btnUpdateRatings.NoAccentTextColor = Color.Empty;
+            btnUpdateRatings.Size = new Size(77, 36);
+            btnUpdateRatings.TabIndex = 33;
+            btnUpdateRatings.Text = "update";
+            btnUpdateRatings.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnUpdateRatings.UseAccentColor = true;
+            btnUpdateRatings.UseVisualStyleBackColor = true;
+            btnUpdateRatings.Click += btnUpdateRatings_Click;
+            // 
+            // lbReview
+            // 
+            lbReview.AutoSize = true;
+            lbReview.Font = new Font("Nirmala UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbReview.ForeColor = Color.LightGreen;
+            lbReview.Location = new Point(14, 17);
+            lbReview.Name = "lbReview";
+            lbReview.Size = new Size(141, 31);
+            lbReview.TabIndex = 25;
+            lbReview.Text = "Post Review";
             // 
             // txtReview
             // 
@@ -186,57 +206,16 @@
             txtReview.TextAlign = HorizontalAlignment.Left;
             txtReview.UseSystemPasswordChar = false;
             // 
-            // btnClearReview
-            // 
-            btnClearReview.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnClearReview.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnClearReview.Depth = 0;
-            btnClearReview.HighEmphasis = true;
-            btnClearReview.Icon = null;
-            btnClearReview.Location = new Point(100, 67);
-            btnClearReview.Margin = new Padding(4, 6, 4, 6);
-            btnClearReview.MouseState = MaterialSkin.MouseState.HOVER;
-            btnClearReview.Name = "btnClearReview";
-            btnClearReview.NoAccentTextColor = Color.Empty;
-            btnClearReview.Size = new Size(66, 36);
-            btnClearReview.TabIndex = 28;
-            btnClearReview.Text = "clear";
-            btnClearReview.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
-            btnClearReview.UseAccentColor = true;
-            btnClearReview.UseVisualStyleBackColor = true;
-            // 
-            // btnSubmitReview
-            // 
-            btnSubmitReview.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnSubmitReview.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnSubmitReview.Depth = 0;
-            btnSubmitReview.HighEmphasis = true;
-            btnSubmitReview.Icon = null;
-            btnSubmitReview.Location = new Point(14, 67);
-            btnSubmitReview.Margin = new Padding(4, 6, 4, 6);
-            btnSubmitReview.MouseState = MaterialSkin.MouseState.HOVER;
-            btnSubmitReview.Name = "btnSubmitReview";
-            btnSubmitReview.NoAccentTextColor = Color.Empty;
-            btnSubmitReview.Size = new Size(75, 36);
-            btnSubmitReview.TabIndex = 27;
-            btnSubmitReview.Text = "submit ";
-            btnSubmitReview.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnSubmitReview.UseAccentColor = true;
-            btnSubmitReview.UseVisualStyleBackColor = true;
-            btnSubmitReview.Click += btnSubmitReview_Click;
-            // 
             // FReview
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1089, 565);
-            Controls.Add(materialCard2);
             Controls.Add(materialCard1);
             Name = "FReview";
             Text = "Review";
             Load += Review_Load;
             materialCard2.ResumeLayout(false);
-            materialCard2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             materialCard1.ResumeLayout(false);
             materialCard1.PerformLayout();
@@ -248,13 +227,12 @@
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private PictureBox pictureBox2;
         private ComboBox cbxRate;
-        private Label lbRateStar;
+        private Label lbRate;
         private MaterialSkin.Controls.MaterialButton btnClearRate;
-        private MaterialSkin.Controls.MaterialButton btnSubmitRate;
+        private MaterialSkin.Controls.MaterialButton btnSubmitRatings;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private Label label18;
+        private Label lbReview;
         private MaterialSkin.Controls.MaterialMultiLineTextBox2 txtReview;
-        private MaterialSkin.Controls.MaterialButton btnClearReview;
-        private MaterialSkin.Controls.MaterialButton btnSubmitReview;
+        private MaterialSkin.Controls.MaterialButton btnUpdateRatings;
     }
 }

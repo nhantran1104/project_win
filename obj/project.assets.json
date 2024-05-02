@@ -2053,11 +2053,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp\\LapTrinhWin\\Project_Win\\Tim_Viec\\TimViec.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\LapTrinhWin\\win\\TimViec\\TimViec.csproj",
       "projectName": "TimViec",
-      "projectPath": "C:\\Users\\hp\\LapTrinhWin\\Project_Win\\Tim_Viec\\TimViec.csproj",
+      "projectPath": "C:\\Users\\hp\\LapTrinhWin\\win\\TimViec\\TimViec.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp\\LapTrinhWin\\Project_Win\\Tim_Viec\\obj\\",
+      "outputPath": "C:\\Users\\hp\\LapTrinhWin\\win\\TimViec\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

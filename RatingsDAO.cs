@@ -1,7 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +11,13 @@ namespace TimViec
     {
         DbConnection connection = new DbConnection();
 
-        public bool AddReview(Ratings ratings, int workerId, int userId)
+        public bool AddRatings(Ratings ratings, int workerId, int userId)
         {
-            string sqlStr = "INSERT INTO Ratings(user_id, Comment) VALUES(@UserId, @Comment)";
+            string sqlStr = "INSERT INTO Ratings (Worker_id, user_id, Stars, Comment) VALUES(@WorkerId, @UserId, @Stars, @Comment)";
 
             using (SqlCommand command = new SqlCommand(sqlStr, connection.Connection))
             {
+                command.Parameters.AddWithValue("Stars", ratings.Stars);
                 command.Parameters.AddWithValue("@Comment", ratings.Commment);
                 command.Parameters.AddWithValue("@WorkerId", workerId);
                 command.Parameters.AddWithValue("@UserId", userId);
@@ -30,13 +30,14 @@ namespace TimViec
             }
         }
 
-        public bool AddRate(Ratings ratings, int workerId, int userId)
+        public bool UpdateRatings(Ratings ratings, int workerId, int userId)
         {
-            string sqlStr = "INSERT INTO Ratings(Worker_id, user_id, Stars) VALUES(@WorkerId, @UserId, @Stars)";
+            string sqlStr = "UPDATE Ratings SET Stars = @Stars, Comment = @Comment WHERE Worker_id = @WorkerId AND user_id = @UserId";
 
             using (SqlCommand command = new SqlCommand(sqlStr, connection.Connection))
             {
-                command.Parameters.AddWithValue("@Stars", ratings.Stars);
+                command.Parameters.AddWithValue("Stars", ratings.Stars);
+                command.Parameters.AddWithValue("@Comment", ratings.Commment);
                 command.Parameters.AddWithValue("@WorkerId", workerId);
                 command.Parameters.AddWithValue("@UserId", userId);
 

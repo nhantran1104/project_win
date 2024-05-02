@@ -9,8 +9,8 @@ namespace TimViec
 {
     internal class JobDAO
     {
-        DbConnection connection = new DbConnection();
 
+        DbConnection connection = new DbConnection();
         public bool AddJobList(JobInfor jobInfor, int userId)
         {
             string sqlStr = "INSERT INTO JobList(JobTitle, JobDescription, Category, Price,ImagesJob, PostedBy) VALUES(@JobTitle, @JobDescription, @Category, @Price, @ImagesJob, @UserId)";
@@ -32,6 +32,7 @@ namespace TimViec
             }
         }
 
+
         public bool AddJobHistory(JobInfor jobInfor, int workerId)
         {
             string sqlStr = "INSERT INTO JobHistory(JobTitle, JobDescription, Category, Price,ImagesJob, Worker_id) VALUES(@JobTitle, @JobDescription, @Category, @Price, @ImagesJob, @Worker_id)";
@@ -52,5 +53,6 @@ namespace TimViec
                 return rowsAffected > 0;
             }
         }
+
     }
 }

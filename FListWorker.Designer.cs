@@ -34,6 +34,8 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             label18 = new Label();
             cbxPrice = new MaterialSkin.Controls.MaterialComboBox();
+            txtSearch = new MaterialSkin.Controls.MaterialTextBox2();
+            btnSearch = new MaterialSkin.Controls.MaterialButton();
             SuspendLayout();
             // 
             // imageList1
@@ -55,9 +57,9 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Location = new Point(24, 157);
+            flowLayoutPanel1.Location = new Point(24, 238);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1521, 787);
+            flowLayoutPanel1.Size = new Size(1521, 706);
             flowLayoutPanel1.TabIndex = 17;
             // 
             // label18
@@ -65,7 +67,7 @@
             label18.AutoSize = true;
             label18.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.LightGreen;
-            label18.Location = new Point(58, 75);
+            label18.Location = new Point(58, 74);
             label18.Name = "label18";
             label18.Size = new Size(229, 54);
             label18.TabIndex = 23;
@@ -87,20 +89,70 @@
             cbxPrice.IntegralHeight = false;
             cbxPrice.ItemHeight = 43;
             cbxPrice.Items.AddRange(new object[] { "ASC", "DESC" });
-            cbxPrice.Location = new Point(366, 80);
+            cbxPrice.Location = new Point(632, 152);
             cbxPrice.MaxDropDownItems = 4;
             cbxPrice.MouseState = MaterialSkin.MouseState.OUT;
             cbxPrice.Name = "cbxPrice";
             cbxPrice.Size = new Size(151, 49);
             cbxPrice.StartIndex = 0;
             cbxPrice.TabIndex = 24;
-            cbxPrice.SelectedIndexChanged += cbxPrice_SelectedIndexChanged;
+            // 
+            // txtSearch
+            // 
+            txtSearch.AnimateReadOnly = false;
+            txtSearch.BackgroundImageLayout = ImageLayout.None;
+            txtSearch.CharacterCasing = CharacterCasing.Normal;
+            txtSearch.Depth = 0;
+            txtSearch.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtSearch.HideSelection = true;
+            txtSearch.Hint = "Search for skill";
+            txtSearch.LeadingIcon = null;
+            txtSearch.Location = new Point(58, 152);
+            txtSearch.MaxLength = 32767;
+            txtSearch.MouseState = MaterialSkin.MouseState.OUT;
+            txtSearch.Name = "txtSearch";
+            txtSearch.PasswordChar = '\0';
+            txtSearch.PrefixSuffixText = null;
+            txtSearch.ReadOnly = false;
+            txtSearch.RightToLeft = RightToLeft.No;
+            txtSearch.SelectedText = "";
+            txtSearch.SelectionLength = 0;
+            txtSearch.SelectionStart = 0;
+            txtSearch.ShortcutsEnabled = true;
+            txtSearch.Size = new Size(520, 48);
+            txtSearch.TabIndex = 26;
+            txtSearch.TabStop = false;
+            txtSearch.TextAlign = HorizontalAlignment.Left;
+            txtSearch.TrailingIcon = null;
+            txtSearch.UseSystemPasswordChar = false;
+            // 
+            // btnSearch
+            // 
+            btnSearch.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnSearch.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnSearch.Depth = 0;
+            btnSearch.HighEmphasis = true;
+            btnSearch.Icon = (Image)resources.GetObject("btnSearch.Icon");
+            btnSearch.Location = new Point(829, 164);
+            btnSearch.Margin = new Padding(4, 6, 4, 6);
+            btnSearch.MouseState = MaterialSkin.MouseState.HOVER;
+            btnSearch.Name = "btnSearch";
+            btnSearch.NoAccentTextColor = Color.Empty;
+            btnSearch.Size = new Size(106, 36);
+            btnSearch.TabIndex = 27;
+            btnSearch.Text = "search";
+            btnSearch.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnSearch.UseAccentColor = false;
+            btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // FListWorker
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 950);
+            Controls.Add(btnSearch);
+            Controls.Add(txtSearch);
             Controls.Add(cbxPrice);
             Controls.Add(label18);
             Controls.Add(flowLayoutPanel1);
@@ -118,5 +170,7 @@
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label18;
         private MaterialSkin.Controls.MaterialComboBox cbxPrice;
+        private MaterialSkin.Controls.MaterialTextBox2 txtSearch;
+        private MaterialSkin.Controls.MaterialButton btnSearch;
     }
 }

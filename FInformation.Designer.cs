@@ -31,54 +31,56 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FInformation));
             materialCard5 = new MaterialSkin.Controls.MaterialCard();
-            lbSalaryText = new MaterialSkin.Controls.MaterialLabel();
-            lbEmailText = new MaterialSkin.Controls.MaterialLabel();
-            lbPhoneText = new MaterialSkin.Controls.MaterialLabel();
-            lbAdressText = new MaterialSkin.Controls.MaterialLabel();
-            lbGenderText = new MaterialSkin.Controls.MaterialLabel();
-            lbNameText = new MaterialSkin.Controls.MaterialLabel();
-            lbRateText = new MaterialSkin.Controls.MaterialLabel();
+            lbSalary = new MaterialSkin.Controls.MaterialLabel();
+            lbEmail = new MaterialSkin.Controls.MaterialLabel();
+            lbPhone = new MaterialSkin.Controls.MaterialLabel();
+            lbAddress = new MaterialSkin.Controls.MaterialLabel();
+            lbGender = new MaterialSkin.Controls.MaterialLabel();
+            lbName = new MaterialSkin.Controls.MaterialLabel();
+            lbRate = new MaterialSkin.Controls.MaterialLabel();
+            btnGiveYourReview = new MaterialSkin.Controls.MaterialButton();
+            btnHire = new MaterialSkin.Controls.MaterialButton();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            lbGender = new Label();
-            lbPhone = new Label();
-            lbSalary = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label9 = new Label();
             pictureBox3 = new PictureBox();
-            lbEmail = new Label();
-            lbRate = new Label();
-            lbAddress = new Label();
-            lbName = new Label();
-            pBx = new PictureBox();
+            label4 = new Label();
+            label7 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            picBxWorker = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             imageList1 = new ImageList(components);
             label8 = new Label();
-            btnGiveReview = new MaterialSkin.Controls.MaterialButton();
-            btnHire = new MaterialSkin.Controls.MaterialButton();
             label1 = new Label();
             materialCard5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pBx).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picBxWorker).BeginInit();
             SuspendLayout();
             // 
             // materialCard5
             // 
             materialCard5.BackColor = Color.FromArgb(255, 255, 255);
-            materialCard5.Controls.Add(lbSalaryText);
-            materialCard5.Controls.Add(lbEmailText);
-            materialCard5.Controls.Add(lbPhoneText);
-            materialCard5.Controls.Add(lbAdressText);
-            materialCard5.Controls.Add(lbGenderText);
-            materialCard5.Controls.Add(lbNameText);
-            materialCard5.Controls.Add(lbRateText);
-            materialCard5.Controls.Add(materialLabel1);
-            materialCard5.Controls.Add(lbGender);
-            materialCard5.Controls.Add(lbPhone);
             materialCard5.Controls.Add(lbSalary);
-            materialCard5.Controls.Add(pictureBox3);
             materialCard5.Controls.Add(lbEmail);
-            materialCard5.Controls.Add(lbRate);
+            materialCard5.Controls.Add(lbPhone);
             materialCard5.Controls.Add(lbAddress);
+            materialCard5.Controls.Add(lbGender);
             materialCard5.Controls.Add(lbName);
-            materialCard5.Controls.Add(pBx);
+            materialCard5.Controls.Add(lbRate);
+            materialCard5.Controls.Add(btnGiveYourReview);
+            materialCard5.Controls.Add(btnHire);
+            materialCard5.Controls.Add(materialLabel1);
+            materialCard5.Controls.Add(label6);
+            materialCard5.Controls.Add(label5);
+            materialCard5.Controls.Add(label9);
+            materialCard5.Controls.Add(pictureBox3);
+            materialCard5.Controls.Add(label4);
+            materialCard5.Controls.Add(label7);
+            materialCard5.Controls.Add(label3);
+            materialCard5.Controls.Add(label2);
+            materialCard5.Controls.Add(picBxWorker);
             materialCard5.Depth = 0;
             materialCard5.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard5.Location = new Point(60, 154);
@@ -86,208 +88,247 @@
             materialCard5.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard5.Name = "materialCard5";
             materialCard5.Padding = new Padding(14);
-            materialCard5.Size = new Size(527, 640);
+            materialCard5.Size = new Size(527, 749);
             materialCard5.TabIndex = 1;
             // 
-            // lbSalaryText
+            // lbSalary
             // 
-            lbSalaryText.AutoSize = true;
-            lbSalaryText.Depth = 0;
-            lbSalaryText.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lbSalaryText.Location = new Point(154, 497);
-            lbSalaryText.MouseState = MaterialSkin.MouseState.HOVER;
-            lbSalaryText.Name = "lbSalaryText";
-            lbSalaryText.Size = new Size(77, 19);
-            lbSalaryText.TabIndex = 42;
-            lbSalaryText.Text = "SalaryText";
+            lbSalary.AutoSize = true;
+            lbSalary.Depth = 0;
+            lbSalary.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbSalary.Location = new Point(136, 503);
+            lbSalary.MouseState = MaterialSkin.MouseState.HOVER;
+            lbSalary.Name = "lbSalary";
+            lbSalary.Size = new Size(77, 19);
+            lbSalary.TabIndex = 42;
+            lbSalary.Text = "SalaryText";
             // 
-            // lbEmailText
+            // lbEmail
             // 
-            lbEmailText.AutoSize = true;
-            lbEmailText.Depth = 0;
-            lbEmailText.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lbEmailText.Location = new Point(154, 431);
-            lbEmailText.MouseState = MaterialSkin.MouseState.HOVER;
-            lbEmailText.Name = "lbEmailText";
-            lbEmailText.Size = new Size(72, 19);
-            lbEmailText.TabIndex = 41;
-            lbEmailText.Text = "EmailText";
+            lbEmail.AutoSize = true;
+            lbEmail.Depth = 0;
+            lbEmail.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbEmail.Location = new Point(136, 436);
+            lbEmail.MouseState = MaterialSkin.MouseState.HOVER;
+            lbEmail.Name = "lbEmail";
+            lbEmail.Size = new Size(72, 19);
+            lbEmail.TabIndex = 41;
+            lbEmail.Text = "EmailText";
             // 
-            // lbPhoneText
+            // lbPhone
             // 
-            lbPhoneText.AutoSize = true;
-            lbPhoneText.Depth = 0;
-            lbPhoneText.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lbPhoneText.Location = new Point(154, 371);
-            lbPhoneText.MouseState = MaterialSkin.MouseState.HOVER;
-            lbPhoneText.Name = "lbPhoneText";
-            lbPhoneText.Size = new Size(77, 19);
-            lbPhoneText.TabIndex = 40;
-            lbPhoneText.Text = "PhoneText";
+            lbPhone.AutoSize = true;
+            lbPhone.Depth = 0;
+            lbPhone.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbPhone.Location = new Point(136, 372);
+            lbPhone.MouseState = MaterialSkin.MouseState.HOVER;
+            lbPhone.Name = "lbPhone";
+            lbPhone.Size = new Size(77, 19);
+            lbPhone.TabIndex = 40;
+            lbPhone.Text = "PhoneText";
             // 
-            // lbAdressText
+            // lbAddress
             // 
-            lbAdressText.AutoSize = true;
-            lbAdressText.Depth = 0;
-            lbAdressText.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lbAdressText.Location = new Point(154, 310);
-            lbAdressText.MouseState = MaterialSkin.MouseState.HOVER;
-            lbAdressText.Name = "lbAdressText";
-            lbAdressText.Size = new Size(89, 19);
-            lbAdressText.TabIndex = 39;
-            lbAdressText.Text = "AddressText";
+            lbAddress.AutoSize = true;
+            lbAddress.Depth = 0;
+            lbAddress.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbAddress.Location = new Point(136, 311);
+            lbAddress.MouseState = MaterialSkin.MouseState.HOVER;
+            lbAddress.Name = "lbAddress";
+            lbAddress.Size = new Size(89, 19);
+            lbAddress.TabIndex = 39;
+            lbAddress.Text = "AddressText";
             // 
-            // lbGenderText
+            // lbGender
             // 
-            lbGenderText.AutoSize = true;
-            lbGenderText.Depth = 0;
-            lbGenderText.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lbGenderText.Location = new Point(154, 246);
-            lbGenderText.MouseState = MaterialSkin.MouseState.HOVER;
-            lbGenderText.Name = "lbGenderText";
-            lbGenderText.Size = new Size(82, 19);
-            lbGenderText.TabIndex = 38;
-            lbGenderText.Text = "GenderText";
+            lbGender.AutoSize = true;
+            lbGender.Depth = 0;
+            lbGender.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbGender.Location = new Point(136, 247);
+            lbGender.MouseState = MaterialSkin.MouseState.HOVER;
+            lbGender.Name = "lbGender";
+            lbGender.Size = new Size(82, 19);
+            lbGender.TabIndex = 38;
+            lbGender.Text = "GenderText";
             // 
-            // lbNameText
+            // lbName
             // 
-            lbNameText.AutoSize = true;
-            lbNameText.Depth = 0;
-            lbNameText.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lbNameText.Location = new Point(154, 178);
-            lbNameText.MouseState = MaterialSkin.MouseState.HOVER;
-            lbNameText.Name = "lbNameText";
-            lbNameText.Size = new Size(100, 19);
-            lbNameText.TabIndex = 37;
-            lbNameText.Text = "FullNameText";
+            lbName.AutoSize = true;
+            lbName.Depth = 0;
+            lbName.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbName.Location = new Point(134, 179);
+            lbName.MouseState = MaterialSkin.MouseState.HOVER;
+            lbName.Name = "lbName";
+            lbName.Size = new Size(74, 19);
+            lbName.TabIndex = 37;
+            lbName.Text = "NameText";
             // 
-            // lbRateText
+            // lbRate
             // 
-            lbRateText.AutoSize = true;
-            lbRateText.Depth = 0;
-            lbRateText.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lbRateText.Location = new Point(154, 586);
-            lbRateText.MouseState = MaterialSkin.MouseState.HOVER;
-            lbRateText.Name = "lbRateText";
-            lbRateText.Size = new Size(64, 19);
-            lbRateText.TabIndex = 36;
-            lbRateText.Text = "RateText";
+            lbRate.AutoSize = true;
+            lbRate.Depth = 0;
+            lbRate.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lbRate.Location = new Point(139, 587);
+            lbRate.MouseState = MaterialSkin.MouseState.HOVER;
+            lbRate.Name = "lbRate";
+            lbRate.Size = new Size(64, 19);
+            lbRate.TabIndex = 36;
+            lbRate.Text = "RateText";
+            // 
+            // btnGiveYourReview
+            // 
+            btnGiveYourReview.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnGiveYourReview.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnGiveYourReview.Depth = 0;
+            btnGiveYourReview.HighEmphasis = false;
+            btnGiveYourReview.Icon = null;
+            btnGiveYourReview.Location = new Point(96, 693);
+            btnGiveYourReview.Margin = new Padding(4, 6, 4, 6);
+            btnGiveYourReview.MouseState = MaterialSkin.MouseState.HOVER;
+            btnGiveYourReview.Name = "btnGiveYourReview";
+            btnGiveYourReview.NoAccentTextColor = Color.Empty;
+            btnGiveYourReview.Size = new Size(151, 36);
+            btnGiveYourReview.TabIndex = 32;
+            btnGiveYourReview.Text = "Give your review";
+            btnGiveYourReview.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnGiveYourReview.UseAccentColor = true;
+            btnGiveYourReview.UseVisualStyleBackColor = true;
+            btnGiveYourReview.Click += btnGiveYourReview_Click;
+            // 
+            // btnHire
+            // 
+            btnHire.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnHire.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnHire.Depth = 0;
+            btnHire.HighEmphasis = false;
+            btnHire.Icon = null;
+            btnHire.Location = new Point(24, 693);
+            btnHire.Margin = new Padding(4, 6, 4, 6);
+            btnHire.MouseState = MaterialSkin.MouseState.HOVER;
+            btnHire.Name = "btnHire";
+            btnHire.NoAccentTextColor = Color.Empty;
+            btnHire.Size = new Size(64, 36);
+            btnHire.TabIndex = 33;
+            btnHire.Text = "HIre";
+            btnHire.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnHire.UseAccentColor = true;
+            btnHire.UseVisualStyleBackColor = true;
             // 
             // materialLabel1
             // 
             materialLabel1.AutoSize = true;
             materialLabel1.Depth = 0;
             materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialLabel1.Location = new Point(300, 498);
+            materialLabel1.Location = new Point(303, 498);
             materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel1.Name = "materialLabel1";
             materialLabel1.Size = new Size(32, 19);
             materialLabel1.TabIndex = 20;
             materialLabel1.Text = "USD";
             // 
-            // lbGender
+            // label6
             // 
-            lbGender.AutoSize = true;
-            lbGender.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbGender.ForeColor = SystemColors.ActiveCaptionText;
-            lbGender.Location = new Point(17, 242);
-            lbGender.Name = "lbGender";
-            lbGender.Size = new Size(65, 23);
-            lbGender.TabIndex = 21;
-            lbGender.Text = "Gender";
+            label6.AutoSize = true;
+            label6.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ActiveCaptionText;
+            label6.Location = new Point(17, 242);
+            label6.Name = "label6";
+            label6.Size = new Size(65, 23);
+            label6.TabIndex = 21;
+            label6.Text = "Gender";
             // 
-            // lbPhone
+            // label5
             // 
-            lbPhone.AutoSize = true;
-            lbPhone.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbPhone.ForeColor = SystemColors.ActiveCaptionText;
-            lbPhone.Location = new Point(17, 367);
-            lbPhone.Name = "lbPhone";
-            lbPhone.Size = new Size(56, 23);
-            lbPhone.TabIndex = 20;
-            lbPhone.Text = "Phone";
+            label5.AutoSize = true;
+            label5.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label5.ForeColor = SystemColors.ActiveCaptionText;
+            label5.Location = new Point(17, 367);
+            label5.Name = "label5";
+            label5.Size = new Size(56, 23);
+            label5.TabIndex = 20;
+            label5.Text = "Phone";
             // 
-            // lbSalary
+            // label9
             // 
-            lbSalary.AutoSize = true;
-            lbSalary.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbSalary.ForeColor = SystemColors.ActiveCaptionText;
-            lbSalary.Location = new Point(17, 493);
-            lbSalary.Name = "lbSalary";
-            lbSalary.Size = new Size(56, 23);
-            lbSalary.TabIndex = 35;
-            lbSalary.Text = "Salary";
+            label9.AutoSize = true;
+            label9.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label9.ForeColor = SystemColors.ActiveCaptionText;
+            label9.Location = new Point(17, 498);
+            label9.Name = "label9";
+            label9.Size = new Size(56, 23);
+            label9.TabIndex = 35;
+            label9.Text = "Salary";
             // 
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(236, 565);
+            pictureBox3.Location = new Point(259, 565);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(40, 40);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 32;
             pictureBox3.TabStop = false;
             // 
-            // lbEmail
+            // label4
             // 
-            lbEmail.AutoSize = true;
-            lbEmail.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbEmail.ForeColor = SystemColors.ActiveCaptionText;
-            lbEmail.Location = new Point(17, 427);
-            lbEmail.Name = "lbEmail";
-            lbEmail.Size = new Size(50, 23);
-            lbEmail.TabIndex = 19;
-            lbEmail.Text = "Email";
+            label4.AutoSize = true;
+            label4.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ActiveCaptionText;
+            label4.Location = new Point(17, 431);
+            label4.Name = "label4";
+            label4.Size = new Size(50, 23);
+            label4.TabIndex = 19;
+            label4.Text = "Email";
             // 
-            // lbRate
+            // label7
             // 
-            lbRate.AutoSize = true;
-            lbRate.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbRate.ForeColor = SystemColors.ActiveCaptionText;
-            lbRate.Location = new Point(24, 582);
-            lbRate.Name = "lbRate";
-            lbRate.Size = new Size(43, 23);
-            lbRate.TabIndex = 33;
-            lbRate.Text = "Rate";
+            label7.AutoSize = true;
+            label7.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label7.ForeColor = SystemColors.ActiveCaptionText;
+            label7.Location = new Point(24, 582);
+            label7.Name = "label7";
+            label7.Size = new Size(43, 23);
+            label7.TabIndex = 33;
+            label7.Text = "Rate";
             // 
-            // lbAddress
+            // label3
             // 
-            lbAddress.AutoSize = true;
-            lbAddress.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbAddress.ForeColor = SystemColors.ActiveCaptionText;
-            lbAddress.Location = new Point(17, 306);
-            lbAddress.Name = "lbAddress";
-            lbAddress.Size = new Size(70, 23);
-            lbAddress.TabIndex = 18;
-            lbAddress.Text = "Address";
+            label3.AutoSize = true;
+            label3.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ActiveCaptionText;
+            label3.Location = new Point(17, 306);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 23);
+            label3.TabIndex = 18;
+            label3.Text = "Address";
             // 
-            // lbName
+            // label2
             // 
-            lbName.AutoSize = true;
-            lbName.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbName.ForeColor = SystemColors.ActiveCaptionText;
-            lbName.Location = new Point(17, 174);
-            lbName.Name = "lbName";
-            lbName.Size = new Size(84, 23);
-            lbName.TabIndex = 17;
-            lbName.Text = "Full Name";
+            label2.AutoSize = true;
+            label2.Font = new Font("Nirmala UI Semilight", 10.2F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ActiveCaptionText;
+            label2.Location = new Point(17, 174);
+            label2.Name = "label2";
+            label2.Size = new Size(84, 23);
+            label2.TabIndex = 17;
+            label2.Text = "Full Name";
             // 
-            // pBx
+            // picBxWorker
             // 
-            pBx.Image = (Image)resources.GetObject("pBx.Image");
-            pBx.Location = new Point(17, 17);
-            pBx.Name = "pBx";
-            pBx.Size = new Size(187, 123);
-            pBx.SizeMode = PictureBoxSizeMode.Zoom;
-            pBx.TabIndex = 0;
-            pBx.TabStop = false;
+            picBxWorker.Image = (Image)resources.GetObject("picBxWorker.Image");
+            picBxWorker.Location = new Point(17, 17);
+            picBxWorker.Name = "picBxWorker";
+            picBxWorker.Size = new Size(216, 140);
+            picBxWorker.SizeMode = PictureBoxSizeMode.Zoom;
+            picBxWorker.TabIndex = 0;
+            picBxWorker.TabStop = false;
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Location = new Point(721, 154);
+            flowLayoutPanel1.Location = new Point(630, 154);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(780, 640);
+            flowLayoutPanel1.Size = new Size(921, 749);
             flowLayoutPanel1.TabIndex = 24;
             // 
             // imageList1
@@ -309,50 +350,11 @@
             label8.AutoSize = true;
             label8.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.LightGreen;
-            label8.Location = new Point(721, 87);
+            label8.Location = new Point(630, 87);
             label8.Name = "label8";
             label8.Size = new Size(180, 41);
             label8.TabIndex = 31;
             label8.Text = "Job History";
-            // 
-            // btnGiveReview
-            // 
-            btnGiveReview.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnGiveReview.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnGiveReview.Depth = 0;
-            btnGiveReview.HighEmphasis = false;
-            btnGiveReview.Icon = null;
-            btnGiveReview.Location = new Point(880, 838);
-            btnGiveReview.Margin = new Padding(4, 6, 4, 6);
-            btnGiveReview.MouseState = MaterialSkin.MouseState.HOVER;
-            btnGiveReview.Name = "btnGiveReview";
-            btnGiveReview.NoAccentTextColor = Color.Empty;
-            btnGiveReview.Size = new Size(151, 36);
-            btnGiveReview.TabIndex = 32;
-            btnGiveReview.Text = "Give your review";
-            btnGiveReview.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnGiveReview.UseAccentColor = true;
-            btnGiveReview.UseVisualStyleBackColor = true;
-            btnGiveReview.Click += btnGiveReview_Click;
-            // 
-            // btnHire
-            // 
-            btnHire.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnHire.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            btnHire.Depth = 0;
-            btnHire.HighEmphasis = false;
-            btnHire.Icon = null;
-            btnHire.Location = new Point(721, 838);
-            btnHire.Margin = new Padding(4, 6, 4, 6);
-            btnHire.MouseState = MaterialSkin.MouseState.HOVER;
-            btnHire.Name = "btnHire";
-            btnHire.NoAccentTextColor = Color.Empty;
-            btnHire.Size = new Size(64, 36);
-            btnHire.TabIndex = 33;
-            btnHire.Text = "HIre";
-            btnHire.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            btnHire.UseAccentColor = true;
-            btnHire.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -371,8 +373,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 920);
             Controls.Add(label1);
-            Controls.Add(btnHire);
-            Controls.Add(btnGiveReview);
             Controls.Add(label8);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(materialCard5);
@@ -383,7 +383,7 @@
             materialCard5.ResumeLayout(false);
             materialCard5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pBx).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBxWorker).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -391,28 +391,28 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialCard materialCard5;
-        private PictureBox pBx;
+        private PictureBox picBxWorker;
         private FlowLayoutPanel flowLayoutPanel1;
         private ImageList imageList1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private Label lbGender;
-        private Label lbPhone;
-        private Label lbEmail;
-        private Label lbAddress;
-        private Label lbName;
-        private Label lbRate;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label7;
         private PictureBox pictureBox3;
         private Label label8;
-        private MaterialSkin.Controls.MaterialLabel lbRateText;
-        private Label lbSalary;
-        private MaterialSkin.Controls.MaterialButton btnGiveReview;
+        private MaterialSkin.Controls.MaterialLabel lbRate;
+        private Label label9;
+        private MaterialSkin.Controls.MaterialButton btnGiveYourReview;
         private MaterialSkin.Controls.MaterialButton btnHire;
         private Label label1;
-        private MaterialSkin.Controls.MaterialLabel lbGenderText;
-        private MaterialSkin.Controls.MaterialLabel lbNameText;
-        private MaterialSkin.Controls.MaterialLabel lbSalaryText;
-        private MaterialSkin.Controls.MaterialLabel lbEmailText;
-        private MaterialSkin.Controls.MaterialLabel lbPhoneText;
-        private MaterialSkin.Controls.MaterialLabel lbAdressText;
+        private MaterialSkin.Controls.MaterialLabel lbSalary;
+        private MaterialSkin.Controls.MaterialLabel lbEmail;
+        private MaterialSkin.Controls.MaterialLabel lbPhone;
+        private MaterialSkin.Controls.MaterialLabel lbAddress;
+        private MaterialSkin.Controls.MaterialLabel lbGender;
+        private MaterialSkin.Controls.MaterialLabel lbName;
     }
 }

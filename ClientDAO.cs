@@ -12,7 +12,6 @@ namespace TimViec
     internal class ClientDAO
     {
         DbConnection connection = new DbConnection();
-
         public bool UpdateInformation(Client client, int userId)
         {
             string sqlStr = "UPDATE Users SET Name = @Name, Email = @Email, DateOfBirth = @DateOfBirth, ImagePath = @ImagePath, PhoneNumber = @Phone, Address = @Address, Gender = @Gender WHERE user_id = @UserId";
@@ -35,5 +34,7 @@ namespace TimViec
                 return rowsAffected > 0;
             }
         }
+
+
     }
 }
