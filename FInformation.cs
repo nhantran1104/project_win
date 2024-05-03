@@ -152,7 +152,7 @@ namespace TimViec
 									AVG(R.Stars) as AVG_Stars
                             FROM Users U
                             JOIN Worker W ON U.user_id = w.user_id
-							JOIN Ratings R ON R.Worker_id = W.Worker_id
+							LEFT JOIN Ratings R ON R.Worker_id = W.Worker_id
                             WHERE W.Worker_id = @WorkerId
 							GROUP BY W.Worker_id, U.Name, U.Gender, U.Address, U.PhoneNumber, U.Email, U.ImagePath, W.Salary;
                             ";

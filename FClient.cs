@@ -89,7 +89,7 @@ namespace TimViec
             }
         }
 
-        private void Home_Load(object sender, EventArgs e)  
+        private void Home_Load(object sender, EventArgs e)
         {
             LoadDataHired();
             LoadDataFavourite();
@@ -476,13 +476,6 @@ namespace TimViec
 
         }
 
-        private void OpenAppointmentForm()
-        {
-            // Open the Appointment form
-            FAppointment appointmentForm = new FAppointment();
-            appointmentForm.Show();
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             Client client = new Client(txtName.Text, txtEmail.Text, dtpBirth.Value, imagePath, txtPhoneNumber.Text, txtLocation.Text, gender);
@@ -511,7 +504,6 @@ namespace TimViec
             }
 
         }
-
     }
 
 }

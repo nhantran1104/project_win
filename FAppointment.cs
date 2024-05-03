@@ -15,8 +15,14 @@ namespace TimViec
     public partial class FAppointment : MaterialForm
     {
         MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-        public FAppointment()
+        AppointmentDAO appointmentDAO = new AppointmentDAO();
+        private int userId;
+        private int workerId;
+
+        public FAppointment(int userId, int workerId)
         {
+            this.userId = userId;
+            this.workerId = workerId;
             InitializeComponent();
 
             materialSkinManager.EnforceBackcolorOnAllComponents = false;
@@ -33,6 +39,20 @@ namespace TimViec
         private void Appointment_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSaveAppointment_Click(object sender, EventArgs e)
+        {
+            Appointment appointment = new Appointment(dtpAppoinment.Value, txtContent.Text);
+            bool isUpdated = appointmentDAO.AddAppointment(appointment, this.userId, this.workerId);
+            if (isUpdated)
+            {
+                MessageBox.Show("Your appointment updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Failed to update your appointment information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

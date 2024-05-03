@@ -245,7 +245,7 @@ namespace TimViec
             MaterialButton btnAppointment = new MaterialButton();
             btnAppointment.Text = "Make An Appointment";
             btnAppointment.Location = new Point(240, 200);
-            btnAppointment.Click += (sender, e) => OpenAppointmentForm();
+            btnAppointment.Click += (sender, e) => OpenAppointmentForm((int)userId, (int)Worker_id);
 
 
             // add controls to the card
@@ -387,10 +387,10 @@ namespace TimViec
         }
 
 
-        private void OpenAppointmentForm()
+        private void OpenAppointmentForm(int userId, int workerId)
         {
             // Open the Appointment form
-            FAppointment appointmentForm = new FAppointment();
+            FAppointment appointmentForm = new FAppointment(userId, workerId);
             appointmentForm.Show();
         }
     }
