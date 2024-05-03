@@ -148,11 +148,13 @@ namespace TimViec
                                     U.PhoneNumber,
 		                            U.Email,
 		                            U.ImagePath,
-                                    W.Salary 
+                                    W.Salary, 
+									AVG(R.Stars) as AVG_Stars
                             FROM Users U
-                            JOIN Worker W
-                            ON U.user_id = w.user_id
+                            JOIN Worker W ON U.user_id = w.user_id
+							JOIN Ratings R ON R.Worker_id = W.Worker_id
                             WHERE W.Worker_id = @WorkerId
+							GROUP BY W.Worker_id, U.Name, U.Gender, U.Address, U.PhoneNumber, U.Email, U.ImagePath, W.Salary;
                             ";
 
             SqlCommand command = new SqlCommand(query);
@@ -176,8 +178,7 @@ namespace TimViec
                 lbPhone.Text = row["PhoneNumber"].ToString();
                 lbEmail.Text = row["Email"].ToString();
                 lbSalary.Text = row["Salary"].ToString();
-
-
+                lbRate.Text = row["AVG_Stars"].ToString();
             }
             dbConnection.Close();
         }

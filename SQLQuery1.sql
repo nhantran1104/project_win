@@ -26,7 +26,7 @@ CREATE TABLE Worker (
     Bio NVARCHAR(MAX),
     Skills NVARCHAR(MAX),
 	Category NVARCHAR(80),
-	Salary DECIMAL(18, 2),
+	Salary NVARCHAR(20),
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 GO
@@ -114,11 +114,12 @@ GO
 SELECT COUNT(*) AS TriggerCount
 FROM sys.triggers;
 
+Go
 CREATE TABLE Ratings (
     rating_id INT IDENTITY PRIMARY KEY,
     Worker_id INT,
     user_id INT,
-    Stars INT,
+    Stars FLOAT,
     Comment NVARCHAR(MAX),
     FOREIGN KEY (Worker_id) REFERENCES Worker(Worker_id),
 	FOREIGN KEY (user_id) REFERENCES Users(user_id)

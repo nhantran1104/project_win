@@ -42,7 +42,7 @@ namespace TimViec
 
         private void btnSubmitRatings_Click(object sender, EventArgs e)
         {
-            Ratings ratings = new Ratings(txtReview.Text, Convert.ToInt32(cbxRate.Text));
+            Ratings ratings = new Ratings(txtReview.Text, Convert.ToDouble(cbxRate.Text));
             bool isUpdated = ratingDAO.AddRatings(ratings, this.workerId, this.userId);
             if (isUpdated)
             {
@@ -61,7 +61,7 @@ namespace TimViec
 
         private void btnUpdateRatings_Click(object sender, EventArgs e)
         {
-            Ratings ratings = new Ratings(txtReview.Text, Convert.ToInt32(cbxRate.Text));
+            Ratings ratings = new Ratings(txtReview.Text, Convert.ToDouble(cbxRate.Text));
             bool isUpdated = ratingDAO.UpdateRatings(ratings, this.workerId, this.userId);
             if (isUpdated)
             {

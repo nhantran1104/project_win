@@ -9,9 +9,9 @@ namespace TimViec
     internal class Ratings
     {
         private String commment;
-        private int stars;
+        private double stars;
 
-        public Ratings(string commment, int stars)
+        public Ratings(string commment, double stars)
         {
             this.commment = commment;
             this.stars = stars;
@@ -19,6 +19,6 @@ namespace TimViec
 
         public string Commment { get => commment; set => commment = value; }
 
-        public int Stars { get => stars; set => stars = value; }
+        public double Stars { get => stars; set => stars = value; }
     }
 }
